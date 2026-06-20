@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACALED - Hesap Oluştur</title>
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="register-container">
+        
+        <div class="register-card">
+            
+            <header class="register-header">
+                <div class="logo-box">
+                    <div class="hexagon">AC</div>
+                    <h2>ACALED</h2>
+                    <p class="subtitle">ACADEMIC IDENTITY PROTOCOL</p>
+                </div>
+                <h1>Hesap Oluştur</h1>
+                <p class="tagline">Zincire katılın • Kimliğinizi doğrulayın</p>
+            </header>
+
+            <div class="register-tabs">
+                <button class="tab-btn active" data-tab="universite">🎓 Üniversite</button>
+                <button class="tab-btn" data-tab="mezun">🏢 Mezun</button>
+                <button class="tab-btn" data-tab="isveren">💼 İşveren</button>
+            </div>
+
+            <form id="register-form" class="register-form">
+                
+                <div id="dynamic-fields-container"></div>
+
+                <button type="submit" class="btn-register">KAYIT OL ❯</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

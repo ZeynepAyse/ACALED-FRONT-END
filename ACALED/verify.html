@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACALED - İşveren Doğrulama Sistemi</title>
+    <link rel="stylesheet" href="verify.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="verify-container">
+        
+        <header class="verify-header">
+    <a href="index.html" class="logo" style="text-decoration: none; display: inline-flex; cursor: pointer;">
+        <span class="logo-icon">🛡️</span>
+        <span style="color: #64748b;">ACALED</span>
+    </a>
+    <h1>İşveren Doğrulama Sistemi</h1>
+    <p>Diploma veya sertifikanın orijinalliğini belge karması ya da kimlik numarasıyla anında doğrulayın.</p>
+</header>
+
+        <div class="verify-card">
+            <form id="verification-form">
+                
+                <div class="input-group">
+                    <label>BELGE KARMASI VEYA KİMLİK NUMARASI</label>
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="verify-input" placeholder="sha256:a1b2c3... veya ITU-2023-BM-047821" required>
+                    </div>
+                </div>
+
+                <div class="divider">
+                    <span>veya</span>
+                </div>
+
+                <div class="dropzone" id="dropzone">
+                    <input type="file" id="file-input" hidden accept=".pdf,.json">
+                    <div class="dropzone-icon">📤</div>
+                    <h3 id="dropzone-text">Dosyayı buraya sürükleyin</h3>
+                    <p>PDF veya JSON — maks. 10 MB</p>
+                </div>
+
+                <button type="submit" class="btn-verify">
+                    <span class="shield-icon">🛡️</span> Doğrula
+                </button>
+            </form>
+        </div>
+
+        <footer class="verify-footer">
+            <p>❯ Demo için <span class="demo-trigger">"DEMO"</span> veya <span class="demo-trigger">"ITU-2023-BM-047821"</span> yazıp doğrulayın</p>
+        </footer>
+    </div>
+
+    <script src="verify.js"></script>
+</body>
+</html>

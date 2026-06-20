@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACALED - Blockchain Sertifika Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🛡️</span>
+            <div>
+                <h1>ACALED</h1>
+                <p>BLOCKCHAIN SERTİFİKA SİSTEMİ</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#ozellikler">Özellikler</a>
+            <a href="#nasil-calisir">Nasıl Çalışır</a>
+            <a href="#guvenlik">Güvenlik</a>
+            <a href="#hakkinda">Hakkında</a>
+        </nav>
+        <div class="nav-auth">
+            <a href="#giris-alani" class="btn-login">Giriş Yap</a>
+            <button class="btn-primary" onclick="window.location.href='register.html'">Başlayın</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="badge">🟣 BLOCKCHAIN TABANLI SERTİFİKA SİSTEMİ</div>
+            <h2 class="hero-title">Akademik <span class="gradient-text">Sertifikalar</span> Yeniden Tanımlandı.</h2>
+            <p class="hero-desc">
+                ACALED, Ethereum akıllı sözleşmelerini kullanarak akademik kayıt tutmayı merkezileştirir — kurumlara, öğrencilere ve işverenlere değiştirilemez, anında doğrulanabilir bir sertifika ekosistemi sunar.
+            </p>
+            <div class="tag-container">
+                <span class="tag">ERC-721 Sertifika NFT'leri</span>
+                <span class="tag">Sıfır Bilgi İspatı</span>
+                <span class="tag">Merkeziyetsiz Kimlik</span>
+                <span class="tag">Sınır Ötesi Doğrulama</span>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-item"><h3>148K+</h3><p>Düzenlenen Sertifika</p></div>
+                <div class="stat-item"><h3>2.400+</h3><p>Ortak Kurum</p></div>
+                <div class="stat-item"><h3>99.9%</h3><p>Çalışma Süresi</p></div>
+                <div class="stat-item"><h3>0</h3><p>Sahte Kayıt</p></div>
+            </div>
+
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="document.getElementById('giris-alani').scrollIntoView({ behavior: 'smooth' })">Platformu Keşfet →</button>
+                <button class="btn-secondary">▶ Tanıtım İzle</button>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="portal-card" id="giris-alani">
+                <div class="portal-tabs">
+                    <button class="tab-btn active" data-tab="universite">🏢 Üniversiteler <br><small>Kurum Portalı</small></button>
+                    <button class="tab-btn" data-tab="ogrenci">🎓 Öğrenciler</button>
+                    <button class="tab-btn" data-tab="isveren">💼 İşverenler</button>
+                </div>
+                
+                <div class="portal-content">
+                    <p class="portal-info">Akademik sertifikaları blok zinciri güvencesiyle düzenleyin, iptal edin ve tam denetim kaydıyla yönetin.</p>
+                    
+                    <form class="login-form" id="main-login-form">
+                        <div id="dynamic-login-fields"></div>
+
+                        <div class="form-footer">
+                            <label><input type="checkbox"> Bu cihazı hatırla</label>
+                            <a href="#" class="forgot-pwd">Şifremi unuttum?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit" id="form-submit-btn">Kurum Paneline Eriş →</button>
+                    </form>
+
+                    <div class="divider"><span>VEYA ŞU YOLLA GİRİŞ YAP</span></div>
+                    <button class="btn-web3" id="connectWalletBtn">🌐 Web3 Cüzdanı Bağla</button>
+                    <p class="signup-text">Hesabınız yok mu? <a href="register.html">Erişim talep edin</a></p>
+                    <div class="form-badge">🟢 BLOCKCHAIN İLE KORUNUYOR • SSL/TLS ŞİFRELİ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="partners">
+        <p>ÖNDE GELEN KURUMLAR TARAFINDAN GÜVENİLİYOR</p>
+        <div class="partner-logos">
+            <span>ODTÜ</span><span>Boğaziçi</span><span>İTÜ</span><span>Hacettepe</span><span>Bilkent</span><span>Sabancı</span><span>Koç</span><span>YTÜ</span>
+        </div>
+    </div>
+
+    <section class="section" id="ozellikler">
+        <div class="section-tag">PLATFORM ÖZELLİKLERİ</div>
+        <h2 class="section-title">Merkeziyetsiz <span class="gradient-text">Akademik Ekonomi</span> için İnşa Edildi</h2>
+        <p class="section-subtitle">ACALED, Ethereum akıllı sözleşmelerini, sıfır bilgi kriptografisini ve W3C Doğrulanabilir Kimlik Bilgisi standardını tek bir birleşik sertifika katmanında birleştirir.</p>
+
+        <div class="grid-3x2">
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Değiştirilemez Kayıtlar</h3>
+                <p>Her sertifika hash'lenerek Ethereum üzerinde saklanır. Hiçbir otorite tam denetim kaydı olmadan kayıtları değiştiremez, taklit edemez veya iptal edemez.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Anında Doğrulama</h3>
+                <p>İşverenler sertifikaları zincir üzerinde 2 saniyenin altında doğrular — manuel e-posta zincirleri veya bekleme süreleri ortadan kalkar.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Küresel Birlikte Çalışabilirlik</h3>
+                <p>ACALED sertifikaları W3C DID ve Doğrulanabilir Kimlik Bilgisi standartları aracılığıyla 140'tan fazla ülkede tanınmaktadır.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Sıfır Bilgi Gizliliği</h3>
+                <p>Öğrenciler, tam belgeyi açıklamadan sertifika nitelikleri (derece düzeyi, not ortalaması aralığı) hakkında kanıt sunar.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📄</div>
+                <h3>Akıllı Sözleşme ile Düzenleme</h3>
+                <p>Üniversiteler sertifikaları denetlenmiş ERC-721 sözleşmeleri aracılığıyla düzenler. Her NFT benign, devredilebilir bir akademik kayıttır.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👥</div>
+                <h3>Merkeziyetsiz Kimlik</h3>
+                <p>Öğrenciler kendi DID'lerine (Merkeziyetsiz Tanımlayıcılar) sahiptir. Hiçbir merkezi otorite akademik kimliğinizi kontrol edemez.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="nasil-calisir">
+        <div class="section-tag">SERTİFİKA YAŞAM DÖNGÜSÜ</div>
+        <h2 class="section-title">ACALED <span class="gradient-text">Nasıl Çalışır</span></h2>
+        
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <div class="step-badge-univ">ÜNİVERSİTE</div>
+                <h3>Sertifika Sözleşmesi Dağıt</h3>
+                <p>Kurumlar ACALED fabrikası aracılığıyla denetlenmiş bir ERC-721 akıllı sözleşmesi dağıtır. Her bölüm kendi sözleşme ad alanını alır.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <div class="step-badge-student">ÖĞRENCİ</div>
+                <h3>Sertifika NFT'si Al</h3>
+                <p>Mezuniyet veya kurs tamamlandığında kurum, öğrencinin DID'e bağlı cüzdan adresine bir sertifika NFT'si basar.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <div class="step-badge-student">ÖĞRENCİ</div>
+                <h3>ZK Kanıtı Oluştur</h3>
+                <p>Öğrenciler ham veriyi açıklamadan zk-SNARK'lar kullanarak derece düzeyi veya not ortalaması aralığı gibi nitelikleri seçici olarak açıklar.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <div class="step-badge-employer">İŞVEREN</div>
+                <h3>Zincir Üzerinde Doğrula</h3>
+                <p>İşverenler ACALED doğrulama API'sini sorgular. Sözleşme 2 saniyenin altında kriptografik özgünlük kanıtı döndürür.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Ekosistem <span class="gradient-text">Ne Diyor</span></h2>
+        <div class="testimonials-container">
+            <div class="testi-card">
+                <span class="quote-mark">“</span>
+                <p>ACALED'i benimsediğimizin ilk döneminde sertifika sahteciliği vakalarımız sıfıra indi. Uluslararası mezunlarımız için blok zinciri doğrulaması son derece sorunsuz çalışıyor.</p>
+                <div class="user-info">
+                    <div class="avatar blue">AK</div>
+                    <div>
+                        <h4>Prof. Dr. Ayşe Kaya</h4>
+                        <p>Öğrenci İşleri Müdürü, ODTÜ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <span class="quote-mark">“</span>
+                <p>Her ay yüzlerce diploma doğruluyoruz. ACALED, özgeçmiş kontrolü sürecimizi 2 haftadan 1 dakikanın altına indirdi. Yatırım getirisi anlıktı.</p>
+                <div class="user-info">
+                    <div class="avatar purple">MY</div>
+                    <div>
+                        <h4>Mehmet Yılmaz</h4>
+                        <p>İnsan Kaynakları Direktörü, Getir</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <span class="quote-mark">“</span>
+                <p>Sertifikalarımın zincir üzerinde olması, onlara sonsuza kadar sahip olduğum anlamına geliyor. Üniversitemin sistemleri çökse bile diplomam Ethereum'da kalıcı olarak doğrulanabilir.</p>
+                <div class="user-info">
+                    <div class="avatar violet">ZA</div>
+                    <div>
+                        <h4>Zeynep Arslan</h4>
+                        <p>Mezun, Yıldız Teknik Üniversitesi — 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <h2>ACALED</h2>
+                </div>
+                <p>Akademik Sertifika Defteri — küresel eğitim ekosistemi için merkeziyetsiz sertifika altyapısı.</p>
+                <div class="social-icons">
+                    <span>🐙</span><span>🐦</span><span>💼</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>PLATFORM</h4>
+                <a href="#">Üniversiteler İçin</a>
+                <a href="#">Öğrenciler İçin</a>
+                <a href="#">İşverenler İçin</a>
+                <a href="#">API Belgeleri</a>
+            </div>
+            <div class="footer-links">
+                <h4>TEKNOLOJİ</h4>
+                <a href="#">Akıllı Sözleşmeler</a>
+                <a href="#">ZK İspatları</a>
+                <a href="#">W3C DID</a>
+                <a href="#">IPFS Depolama</a>
+            </div>
+            <div class="footer-links">
+                <h4>KURUMSAL</h4>
+                <a href="#">ACALED Hakkında</a>
+                <a href="#">Blog</a>
+                <a href="#">Güvenlik</a>
+                <a href="#">İletişim</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ACALED VAKFI • TÜM HAKLARI SAKLIDIR</p>
+            <p><span class="dot">🟢</span> ANA AĞ: CANLI • BLOK #21.847.302</p>
+        </div>
+    </footer>
+
+    <section class="section" id="guvenlik">
+        <div class="section-tag">KORUMA KATMANI</div>
+        <h2 class="section-title">Kriptografik <span class="gradient-text">Güvenlik</span> Protokolleri</h2>
+        <p class="section-subtitle">ACALED, verilerinizi ve sertifika süreçlerinizi en üst düzey blockchain standartlarıyla korur.</p>
+        
+        <div class="grid-3x2">
+            <div class="card">
+                <div class="card-icon">🔑</div>
+                <h3>Uçtan Uca Şifreleme</h3>
+                <p>Tüm sertifika verileri veri tabanına veya blockchain ağına gönderilmeden önce tarayıcıda şifrelenir.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⛓️</div>
+                <h3>Merkeziyetsiz Güvence</h3>
+                <p>Tek bir hata noktası yoktur. Ağın güvenliği küresel Ethereum validator'ları tarafından sağlanır.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔐</div>
+                <h3>SSL/TLS Güvenliği</h3>
+                <p>Veri transferleri SSL standartları ile korunurken, kullanılan şifreleme mimarisi geleceğin teknolojilerine uyumludur.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="hakkinda">
+        <div class="section-tag">VİZYONUMUZ</div>
+        <h2 class="section-title">Akademik Geleceği <span class="gradient-text">Güvenle İnşa Ediyoruz</span></h2>
+        <p class="section-subtitle">Biz kimiz ve eğitim ekosisteminde neyi değiştirmeyi hedefliyoruz?</p>
+        
+        <div class="card" style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8;">
+                ACALED, eğitimde sahteciliğin önüne geçmek ve küresel diplomaların doğrulanma sürecini hızlandırmak amacıyla kurulmuş bir Web3 ekosistemidir. Geleneksel bürokratik süreçleri ortadan kaldırarak, öğrencilerin başarılarını tamamen kendi kontrol edebilecekleri akıllı cüzdanlarda toplamalarını sağlıyoruz. Üniversiteler, işverenler ve mezunlar arasında güvenli, hızlı ve şeffaf bir köprü kurmaktan gurur duyuyoruz.
+            </p>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

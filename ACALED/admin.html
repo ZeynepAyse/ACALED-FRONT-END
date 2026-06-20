@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACALED - Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="admin-layout">
+        
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <div>
+                        <h2>ACALED</h2>
+                        <p>Blockchain Auth</p>
+                    </div>
+                </div>
+                
+                <div class="menu-label">PLATFORM</div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" data-target="diploma-yukle">
+                        <span class="icon">📤</span> Diploma Yükle <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="nav-item" data-target="kayitli-diplomalar">
+                        <span class="icon">🎓</span> Kayıtlı Diplomalar
+                    </a>
+                    <a href="#" class="nav-item" data-target="istatistikler">
+                        <span class="icon">📊</span> İstatistikler
+                    </a>
+                    <a href="#" class="nav-item" data-target="ayarlar">
+                        <span class="icon">⚙️</span> Ayarlar
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+    <div class="institution-card" style="margin-bottom: 10px;">
+        <div class="inst-avatar">iü</div>
+        <div class="inst-meta">
+            <h4>Yıldız Teknik Üniversitesi</h4>
+            <p>Admin Panel</p>
+        </div>
+    </div>
+    
+    <a href="index.html" style="color: #6b7c96; text-decoration: none; font-size: 13px; display: block; padding: 8px 10px; border-radius: 6px; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='transparent'">
+        ↪ Oturumu Kapat
+    </a>
+</div>
+        </aside>
+
+        <main class="main-content">
+            
+            <div class="breadcrumb">
+                📄 Platform <span class="b-arrow">›</span> <span id="current-breadcrumb" class="active-crumb">Diploma Yükle</span>
+            </div>
+
+            <section id="diploma-yukle" class="content-view active">
+                <header class="view-header">
+                    <h1>Diploma Yükle</h1>
+                    <p>Diploma belgesini blockchain ağına kaydetmek için yükleyin.</p>
+                </header>
+
+                <div class="admin-card text-center">
+                    <div class="dropzone" id="dropzone">
+                        <input type="file" id="file-input" hidden accept=".pdf,.png,.jpg,.jpeg">
+                        <div class="dropzone-icon">📤</div>
+                        <h3 id="dropzone-text">Dosyayı buraya sürükleyin</h3>
+                        <p>veya tıklayın • PDF, PNG, JPG • Maks. 10 MB</p>
+                    </div>
+
+                    <form class="admin-form" id="upload-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Öğrenci Adı</label>
+                                <input type="text" placeholder="Ad ve Soyad" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Öğrenci Numarası</label>
+                                <input type="text" placeholder="Örn. 20240001" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Bölüm</label>
+                                <input type="text" placeholder="Örn. Bilgisayar Mühendisliği" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Mezuniyet Yılı</label>
+                                <input type="text" placeholder="Örn. 2024" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-blockchain">🛡️ Blockchain'e Kaydet</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="kayitli-diplomalar" class="content-view">
+                <header class="view-header">
+                    <h1>Kayıtlı Diplomalar</h1>
+                    <p>Blockchain ağında doğrulanmış diploma kayıtları.</p>
+                </header>
+
+                <div class="admin-card no-padding">
+                    <div class="table-header">
+                        <h3>Tüm Kayıtlar</h3>
+                        <span class="count-badge">5 kayıt</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>ÖĞRENCİ</th>
+                                    <th>BÖLÜM</th>
+                                    <th>YIL</th>
+                                    <th>DURUM</th>
+                                    <th>TARİH</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-purple font-mono">DIP-2024-001</td>
+                                    <td><strong>Ayşe Kaya</strong></td>
+                                    <td>Bilgisayar Müh.</td>
+                                    <td>2024</td>
+                                    <td><span class="badge badge-success">✓ Doğrulandı</span></td>
+                                    <td class="text-muted">15 Mar 2024</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-purple font-mono">DIP-2024-002</td>
+                                    <td><strong>Mehmet Demir</strong></td>
+                                    <td>Elektrik Müh.</td>
+                                    <td>2024</td>
+                                    <td><span class="badge badge-warning">🕒 Beklemede</span></td>
+                                    <td class="text-muted">16 Mar 2024</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-purple font-mono">DIP-2023-099</td>
+                                    <td><strong>Zeynep Arslan</strong></td>
+                                    <td>Makine Müh.</td>
+                                    <td>2023</td>
+                                    <td><span class="badge badge-success">✓ Doğrulandı</span></td>
+                                    <td class="text-muted">10 Jan 2024</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-purple font-mono">DIP-2023-087</td>
+                                    <td><strong>Ali Yıldız</strong></td>
+                                    <td>İnşaat Müh.</td>
+                                    <td>2023</td>
+                                    <td><span class="badge badge-success">✓ Doğrulandı</span></td>
+                                    <td class="text-muted">08 Jan 2024</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-purple font-mono">DIP-2022-054</td>
+                                    <td><strong>Fatma Şahin</strong></td>
+                                    <td>Mimarlık</td>
+                                    <td>2022</td>
+                                    <td><span class="badge badge-success">✓ Doğrulandı</span></td>
+                                    <td class="text-muted">20 Dec 2023</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="istatistikler" class="content-view">
+                <header class="view-header">
+                    <h1>İstatistikler</h1>
+                    <p>Platform genelinde özet veriler.</p>
+                </header>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-icon bg-purple-tint">🎓</span>
+                            <span class="stat-trend text-green">+12%</span>
+                        </div>
+                        <h3>1.284</h3>
+                        <p>Toplam Diploma</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-icon bg-green-tint">✓</span>
+                            <span class="stat-trend text-green">+9%</span>
+                        </div>
+                        <h3>1.241</h3>
+                        <p>Doğrulandı</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-icon bg-blue-tint">👥</span>
+                            <span class="stat-trend text-green">+14%</span>
+                        </div>
+                        <h3>1.192</h3>
+                        <p>Öğrenci</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-icon bg-purple-tint">📈</span>
+                            <span class="stat-trend text-green">+23%</span>
+                        </div>
+                        <h3>87</h3>
+                        <p>Bu Ay</p>
+                    </div>
+                </div>
+
+                <div class="admin-card margin-top">
+                    <div class="chart-header">
+                        <h3>Bölüm Dağılımı</h3>
+                    </div>
+                    <div class="bar-chart-container">
+                        <div class="chart-row">
+                            <span class="chart-label">Bilgisayar Müh.</span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                            <span class="chart-value">312</span>
+                        </div>
+                        <div class="chart-row">
+                            <span class="chart-label">Elektrik Müh.</span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                            <span class="chart-value">247</span>
+                        </div>
+                        <div class="chart-row">
+                            <span class="chart-label">Makine Müh.</span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 55%;"></div>
+                            </div>
+                            <span class="chart-value">198</span>
+                        </div>
+                        <div class="chart-row">
+                            <span class="chart-label">İnşaat Müh.</span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 48%;"></div>
+                            </div>
+                            <span class="chart-value">176</span>
+                        </div>
+                        <div class="chart-row">
+                            <span class="chart-label">Mimarlık</span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 38%;"></div>
+                            </div>
+                            <span class="chart-value">143</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ayarlar" class="content-view">
+                <header class="view-header">
+                    <h1>Ayarlar</h1>
+                    <p>Platform ve blockchain yapılandırması.</p>
+                </header>
+
+                <div class="admin-card max-width-md">
+                    <form class="settings-form" id="settings-form">
+                        <div class="settings-group">
+                            <label>Üniversite Adı</label>
+                            <input type="text" value="Yıldız Teknik Üniversitesi">
+                        </div>
+                        <div class="settings-group">
+                            <label>Blockchain Ağı</label>
+                            <input type="text" value="Ethereum Mainnet">
+                        </div>
+                        <div class="settings-group">
+                            <label>API Anahtarı</label>
+                            <input type="password" value="•••••••••••••••••••••">
+                        </div>
+                        <button type="submit" class="btn-save">Kaydet</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
